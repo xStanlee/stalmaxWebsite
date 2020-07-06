@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-Color: #7d9296;
+    --main-Color-light: #cbeaf0;
+}
+body{
+    background-color: var(--main-Color-light);
+}
+
+@keyframes blur {
+    0% {
+        filter: blur(1px);
+        -webkit-filter: blur(1px);
+    }
+    25% {
+        filter: blur(2px);
+        -webkit-filter: blur(2px);
+    }
+    50% {
+        filter: blur(20px);
+        -webkit-filter: blur(20px);
+    }
+    75% {
+        filter: blur(2px);
+        -webkit-filter: blur(2px);
+    }
+    100% {
+        filter: blur(1px);
+        -webkit-filter: blur(1px);
+    }
+}
+
+.bg-video {
+    background-color: var(--main-Color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 96%, 0 75%);
+    z-index: -1;
+    opacity: .9;
+    overflow: hidden;
+}
+.bg-video__content {
+    animation: blur 7s infinite;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.logo{
+    width:  min-content;
+    height: min-content;
+    position: absolute;
+    top: 4vh;
+    left: 9vh;
+}
+h1 {
+    font-family: 'Raleway', verdana, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    top: 20px;
+}
+h2 {
+    transform: translateX(-5vw);
+}
+a {
+    text-decoration: none;
+}
+
+#nav__btn-1 {
+    top: 28vh;
+}
+
+#nav__btn-2 {
+    top: 36vh;
+}
+
+#nav__btn-3 {
+    top: 44vh;
+}
+
+#nav__btn-4 {
+    top: 52vh;
+}
+
+ .nav__btn {
+    background-color: var(--main-Color);
+    margin: auto;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    width: 500px;
+    height: 6.5vh;
+    position: fixed;
+    left: -415px;
+    box-shadow: 0 1px #fff;
+    opacity: .25;
+    transition: .7s ease;
+}
+
+.nav__btn:hover {
+    background-color: var(--main-Color);
+    position: fixed;
+    opacity: 1;
+    left: -50px;
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: 5px -5px 10px 0 var(--main-Color-light);
+    cursor: pointer;
+}
+
+ .nav__btn:active{
+    background-color: var(--main-Color-light);
+    transition: 0s;
+    color: #ecf0f1;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40vh;
+}
+.container > * {
+    font-family: 'Righteous', cursive !important;
+    color: var(--main-Color-light);
+    font-size: 3rem;
+    margin-bottom: 4vh;
+}
