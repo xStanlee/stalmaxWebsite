@@ -10,52 +10,140 @@
 
   <link rel="stylesheet" href="css/styles.css?v=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Raleway:wght@300;400&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
-
-  <div class="bg-video">
-    <video class="bg-video__content" autoplay muted loop>
-      <source src="videoplayback.mp4" type="video/mp4">
-      <source src="videoplayback.webm" type="video/webm">
-    </video>
-  </div>
-  <div class="logo">
-    <img src="stallmax.png" alt="logo" class="logo__img">
-  </div>
-
-  <a href="https://www.example.co.uk">
-    <div id="nav__btn-1" class="nav__btn">
-      <h1>Strona główna</h1>
+  <section class="main">
+    <div class="bg-video">
+      <video class="bg-video__content" autoplay muted loop>
+        <source src="videoplayback.mp4" type="video/mp4">
+        <source src="videoplayback.webm" type="video/webm">
+          Your browser is not supported.
+      </video>
     </div>
-  </a>
-
-  <a href="https://www.example.co.uk">
-    <div id="nav__btn-2" class="nav__btn">
-      <h1>Nasze prace</h1>
+    <div class="logo">
+      <img src="stallmax.png" alt="logo" class="logo__img">
     </div>
-  </a>
 
-  <a href="https://www.example.co.uk">
-    <div id="nav__btn-3" class="nav__btn">
-      <h1>O nas</h1>
+    <a href="https://www.example.co.uk">
+      <div id="nav__btn-1" class="nav__btn">
+        <h1>Strona główna</h1>
+      </div>
+    </a>
+
+    <a href="https://www.example.co.uk">
+      <div id="nav__btn-2" class="nav__btn">
+        <h1>Nasze prace</h1>
+      </div>
+    </a>
+
+    <a href="https://www.example.co.uk">
+      <div id="nav__btn-3" class="nav__btn">
+        <h1>O nas</h1>
+      </div>
+    </a>
+
+    <a href="https://www.example.co.uk">
+      <div id="nav__btn-4" class="nav__btn">
+        <h1>Kontakt</h1>
+      </div>
+    </a>
+
+    <div class="container">
+      <h2>witaj na stronie</h2>
+      <h1>Stal-max usługi:
+        <span class="txt-type" data-wait="3000" data-words='["Spawalnicze", "Elektryczne", "Monterskie"]'></span>
+      </h1>
     </div>
-  </a>
-
-  <a href="https://www.example.co.uk">
-    <div id="nav__btn-4" class="nav__btn">
-      <h1>Kontakt</h1>
+  </section>
+  <section class="examples">
+    <h2 class="examples__title">Wsparcie detalu i dużych firm</h2>
+    <div class="examples__text">
+      <h3 class="examples__bold">
+        Przyjmujemy zlecenia od klientów detalicznych
+      </h3>
+      <p class="examples__paragraph">
+        Jesteśmy firmą, której kręgosłup stanowią ludzie wyspecjalizowani w powyższych dziedzinach.
+        Naszym priorytetem jest to aby nasi klienci byli zadowoleni z naszych usług.
+      </p>
+      <h3 class="examples__bold">
+        Współpracujemy z większymi firmami jako outsourcing
+      </h3>
+      <p class="examples__paragraph">
+        Wykonywaliśmy prace dla koncernów takich jak toyota czy Alba. Z której to wynikały obopulne korzyści.
+      </p>
+      <a href="#" class="btn btn-blue">Pokaż galerie</a>
     </div>
-  </a>
 
-  <div class="container">
-    <h2>witaj na stronie.</h2>
-    <h1>Stal-max usługi:
-      <span class="txt-type" data-wait="3000" data-words='["Spawalnicze", "Elektryczne", "Monterskie"]'></span>
-    </h1>
-  </div>
+    <div class="examples__gallery">
+      <img src="elektryka.jpg" alt="P1" class="examples__gallery-picture examples__gallery-picture-1">
+      <img src="spawalnictwo.jpg" alt="P2" class="examples__gallery-picture examples__gallery-picture-2">
+      <img src="Hydraulika.JPG" alt="P3" class="examples__gallery-picture examples__gallery-picture-3">
+    </div>
+  </section>
+  <section class="services">
+    <div class="services__info services__info-1">
+      <h4 class="services__header">Spawanie</h4>
+      <ul class="services__ul">
+        <li class="services__li">Spawanie konstrukcyji stalowych</li>
+        <li class="services__li">Metaloplastyka detaliczna</li>
+        <li class="services__li">Spawanie aluminium</li>
+        <li class="services__li">Produkcja podzespołów</li>
+      </ul>
+    </div>
+    <div class="services__info services__info-2">
+      <h4 class="services__header">Elektryka</h4>
+      <ul class="services__ul">
+        <li class="services__li">Elektryka domowa</li>
+        <li class="services__li">Elektryka pojazdowa</li>
+        <li class="services__li">Trasowanie kabli</li>
+        <li class="services__li">Naprawa sprzętu elektrycznego lub podzespołów</li>
+      </ul>
+    </div>
+    <div class="services__info services__info-3">
+      <h4 class="services__header">Hydraulika</h4>
+      <ul class="services__ul">
+        <li class="services__li">Hydraulika sprzętów ciężkich</li>
+        <li class="services__li">Hydraulika z wykorzystaniem miedzi</li>
+        <li class="services__li">Hydraulika z wykorzystaniem plastiku</li>
+        <li class="services__li">Hydraulika z wykorzystaniem stali</li>
+      </ul>
+    </div>
+    <div class="services__info services__info-4">
+      <h4 class="services__header">Soft/Elektronika</h4>
+      <ul class="services__ul">
+        <li class="services__li">Ekrany LED wew.</li>
+        <li class="services__li">Ekrany LED zew.(Telebimy)</li>
+        <li class="services__li">Kamery smart</li>
+        <li class="services__li">Aplikacji web na zamówienie</li>
+      </ul>
+    </div>
+  </section>
+  <section class="comments">
+    <h2 class="examples__title">Nasi zadowoleni klienci</h2>
+    <div class="comments__comment">
+      <figure class="comments__shape">
+        <img src="" alt="Person-1" class="comments__img">
+        <figcaption class="comments__caption">Piotr S.</figcaption>
+      </figure>
+      <div class="comments__text">
+        <h5 class="comments__header"></h5>
+        <p class="comments__paragraph"></p>
+      </div>
+    </div>
+    <div class="comments__comment">
+      <figure class="comments__shape">
+        <img src="" alt="Person-1" class="comments__img">
+        <figcaption class="comments__caption">Piotr S.</figcaption>
+      </figure>
+      <div class="comments__text">
+        <h5 class="comments__header"></h5>
+        <p class="comments__paragraph"></p>
+      </div>
+    </div>
+  </section>
 
   <script src="js/scripts.js"></script>
 </body>
