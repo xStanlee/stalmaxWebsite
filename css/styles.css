@@ -194,6 +194,105 @@ a {
     transition: 0s;
     color: #ecf0f1;
 }
+
+/* ----------------------------------------------------------------
+/* ----------------------------------------------------------------
+/* ----------------------------------------------------------------
+/* ------------------- POP UP NAVI --------------------------------
+/* ----------------------------------------------------------------
+/* ----------------------------------------------------------------
+/* --------------------------------------------------------------*/
+
+.navigation{
+
+}
+.navigation__checkbox{
+    display: none;
+}
+.navigation__button{
+    background-image: radial-gradient(rgba(247, 247, 247, .8), rgba(247, 247, 247, .9)), url(../telephone.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 7rem;
+    width: 7rem;
+    position: fixed;
+    top: 6rem;
+    right: 6rem;
+    border-radius: 50%;
+    z-index: 1002;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, .2);
+}
+.navigation__background{
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 6.5rem;
+    right: 6.5rem;
+    background-image: radial-gradient(var(--text-Color-light),var(--text-Color-dark));
+    z-index: 1000;
+    transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+.navigation__nav{
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+
+    opacity: 0;
+    width: 0;
+    transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.navigation__list{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style-type: none;
+    text-align: center;
+}
+.navigation__item{
+    margin: 2rem;
+}
+.navigation__link:link,
+.navigation__link:visited{
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: 300;
+    padding: 1rem 2rem;
+    color: var(--main-Color-light);
+    text-decoration: none;
+    text-transform: uppercase;
+    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, var(--main-Color-light) 50%);
+    background-size: 250%;
+    transition: all .6s;
+}
+.navigation__link:link > span,
+.navigation__link:visited > span {
+    margin-right: 1.5rem;
+    display: inline-block;
+}
+.navigation__link:active,
+.navigation__link:hover{
+    background-position: 100%;
+    color: var(--text-Color-dark);
+    transform: translateX(1rem);
+}
+
+
+
+.navigation__checkbox:checked ~ .navigation__background{
+    transform: scale(80);
+}
+.navigation__checkbox:checked ~ .navigation__nav{
+    opacity: 1;
+    width: 100%;
+}
+/* ----------------------------------------------------------------
+/* ----------------------------------------------------------------
+/* --------------------------------------------------------------*/
 .container{
     display: flex;
     flex-direction: column;
@@ -370,6 +469,7 @@ a {
     align-items: center;
 }
 .comments__comment{
+    display: flex;
     width: 60%;
     margin: 3rem auto;
     box-shadow: var(--box-Shadow);
@@ -378,4 +478,161 @@ a {
     padding: 5rem;
     padding-left: 8rem;
     transform: skewX(-12deg);
+}
+.comments__shape{
+    position: relative;
+}
+.comments__img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transform: skewX(12deg);
+    backface-visibility: hidden;
+}
+.comments__caption{
+    position: absolute;
+    transform: translate(-50%, 20%);
+    color: #000;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    transition: all .5s;
+    backface-visibility: hidden;
+}
+.comments__comment:hover .comments__caption{
+    opacity: 1;
+    transform: translate(30%, -20%);
+}
+.comments__text{
+    margin: 0 auto;
+    box-shadow: var(--box-Shadow-white);
+    width:500px;
+    height:130px;
+}
+.comments__header{
+    transform: skewX(12deg);
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--main-Color);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.comments__paragraph{
+    margin: 0 10px;
+    color: #fff;
+    font-size: 1.5rem;
+}
+.message{
+    margin: 10vh 0;
+    width: 100vw;
+    height: 80vh;
+    background-image: linear-gradient(to right bottom, rgba(35, 57, 92, 0.8), rgba(35, 57, 92, 0.9)), url(../background_send.jpg);
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 25%, 100% 96%, 0 75%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.examples__title-white{
+    margin:5vh 0 0 25vw;
+    background-image: linear-gradient(to right, var(--main-Color-light), var(--main-Color)) !important;
+}
+
+/* ----------------------------------------------------------------
+-------------------------------------------------------------------
+---------------------- TEST ------------------------------------- */
+
+.margin {
+	margin-left:12px;
+	margin-bottom:20px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+.title {
+	background-color:transparent;
+	border-bottom:3px solid #FFF;
+	color:#FFF;
+	font-size:20px;
+	font-family:Courier, monospace;
+	height:28px;
+	font-weight:bold;
+	width:220px;
+}
+#paper {
+	color:#FFF;
+	font-size:20px;
+}
+#text {
+	width:500px;
+	overflow:hidden;
+	background-color:#FFF;
+	color:#222;
+	font-family:Courier, monospace;
+	font-weight:normal;
+	font-size:24px;
+	resize:none;
+	line-height:40px;
+	padding-left:100px;
+	padding-right:100px;
+	padding-top:45px;
+	padding-bottom:34px;
+	background-image:url(https://static.tumblr.com/maopbtg/E9Bmgtoht/lines.png), url(https://static.tumblr.com/maopbtg/nBUmgtogx/paper.png);
+	background-repeat:repeat-y, repeat;
+	-webkit-border-radius:12px;
+	border-radius:12px;
+	-webkit-box-shadow: var(--box-Shadow-white);
+	box-shadow: var(--box-Shadow-white);;
+	border-top:1px solid #FFF;
+	border-bottom:1px solid #FFF;
+}
+#button {
+	cursor:pointer;
+	margin-top:20px;
+	float:right;
+	height:40px;
+	padding-left:24px;
+	padding-right:24px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size:20px;
+	color:#FFF;
+	text-shadow: 0px -1px 0px #000000;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border-top:1px solid #FFF;
+	-webkit-box-shadow: 0px 2px 14px #000;
+	box-shadow: 0px 2px 14px #000;
+	background-color: #62add6;
+	background-image:url(https://static.tumblr.com/maopbtg/ZHLmgtok7/button.png);
+	background-repeat:repeat-x;
+}
+#button:active {
+	zoom: 1;
+	filter: alpha(opacity=80);
+	opacity: 0.8;
+}
+#button:focus {
+	zoom: 1;
+	filter: alpha(opacity=80);
+	opacity: 0.8;
+}
+#wrapper {
+	width:700px;
+	height:auto;
+	margin-left:auto;
+	margin-right:10vw;
+	margin-top:20vh;
+	margin-bottom:100px;
+}
+
+.footer{
+    width:100vw;
+    height: 50vh;
+    background-image: url(../footer__BG-2.png);
+    background-size: cover;
 }
