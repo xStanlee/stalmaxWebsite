@@ -8,6 +8,7 @@
 
 
 html {
+    scroll-behavior: smooth;
     box-sizing: border-box;
     font-size: 62.5%;
 
@@ -149,18 +150,22 @@ a {
 }
 #nav__btn-1 {
     top: 28vh;
+    z-index: 9999;
 }
 
 #nav__btn-2 {
     top: 36vh;
+    z-index: 9999;
 }
 
 #nav__btn-3 {
     top: 44vh;
+    z-index: 9999;
 }
 
 #nav__btn-4 {
     top: 52vh;
+    z-index: 9999;
 }
 
  .nav__btn {
@@ -203,9 +208,7 @@ a {
 /* ----------------------------------------------------------------
 /* --------------------------------------------------------------*/
 
-.navigation{
 
-}
 .navigation__checkbox{
     display: none;
 }
@@ -219,7 +222,7 @@ a {
     top: 6rem;
     right: 6rem;
     border-radius: 50%;
-    z-index: 1002;
+    z-index: 1004;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, .2);
 }
 .navigation__background{
@@ -238,7 +241,7 @@ a {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1001;
+    z-index: 1003;
 
     opacity: 0;
     width: 0;
@@ -369,6 +372,21 @@ a {
     height: min-content;
     grid-row: row-start 2 / row-end 4;
 }
+.examples__gallery-slideInRight{
+    transform: translateX(120%) scale(0.93);
+}
+.examples__gallery-slideInLeft{
+    transform: translateX(-120%) scale(0.93);
+}
+.slide-in{
+    opacity: 0;
+    transition: all .7s;
+}
+.slide-in-active{
+    opacity: 1;
+    transform: translateX(0%) scale(1);
+}
+
 .examples__gallery-picture{
     position: absolute;
     width: 250px;
