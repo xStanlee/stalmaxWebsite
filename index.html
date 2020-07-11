@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Stal-max spawalnictwo</title>
+  <title>Przedsiębiorstwo Stal-Max</title>
   <meta name="description" content="firma spawalnictwo usługi montaż montaz wałbrzych naprawa">
   <meta name="author" content="P.Stachura">
 
@@ -51,25 +51,25 @@
       <img src="stallmax.png" alt="logo" class="logo__img">
     </div>
 
-    <a href="https://www.example.co.uk">
+    <a href="#">
       <div id="nav__btn-1" class="nav__btn">
         <h1>Strona główna</h1>
       </div>
     </a>
 
-    <a href="https://www.example.co.uk">
+    <a href="#section-works">
       <div id="nav__btn-2" class="nav__btn">
         <h1>Nasze prace</h1>
       </div>
     </a>
 
-    <a href="https://www.example.co.uk">
+    <a href="#scroll-about">
       <div id="nav__btn-3" class="nav__btn">
         <h1>O nas</h1>
       </div>
     </a>
 
-    <a href="https://www.example.co.uk">
+    <a href="#scroll-contact">
       <div id="nav__btn-4" class="nav__btn">
         <h1>Kontakt</h1>
       </div>
@@ -78,12 +78,12 @@
     <div class="container">
       <h2>witaj na stronie</h2>
       <h1>Stal-max usługi:
-        <span class="txt-type" data-wait="3000" data-words='["Spawalnicze", "Elektryczne", "Monterskie"]'></span>
+        <span class="txt-type" data-wait="3000" data-words='["Spawalnicze", "Elektryczne", "Hydrauliczne", "Monterskie"]'></span>
       </h1>
     </div>
   </section>
-  <section class="examples">
-    <h2 class="examples__title">Wsparcie detalu i dużych firm</h2>
+  <section id="section-works" class="examples">
+    <h2 id="scroll-works" class="examples__title slide-in">Wsparcie detalu i dużych firm</h2>
     <div class="examples__text">
       <h3 class="examples__bold">
         Przyjmujemy zlecenia od klientów detalicznych
@@ -98,16 +98,16 @@
       <p class="examples__paragraph">
         Wykonywaliśmy prace dla koncernów takich jak toyota czy Alba. Z której to wynikały obopulne korzyści.
       </p>
-      <a href="#" class="btn btn-blue">Pokaż galerie</a>
+      <a href="#section-works" class="btn btn-blue slide-in .examples__gallery-slideInLeft">Pokaż galerie</a>
     </div>
 
-    <div class="examples__gallery">
+    <div class="examples__gallery slide-in examples__gallery-slideInRight">
       <img src="elektryka.jpg" alt="P1" class="examples__gallery-picture examples__gallery-picture-1">
       <img src="spawalnictwo.jpg" alt="P2" class="examples__gallery-picture examples__gallery-picture-2">
       <img src="Hydraulika.JPG" alt="P3" class="examples__gallery-picture examples__gallery-picture-3">
     </div>
   </section>
-  <section class="services">
+  <section id="scroll-about" class="services">
     <div class="services__info services__info-1">
       <h4 class="services__header">Spawanie</h4>
       <ul class="services__ul">
@@ -147,7 +147,7 @@
   </section>
   <section class="comments">
     <h2 class="examples__title">Nasi zadowoleni klienci</h2>
-    <div class="comments__comment">
+    <div class="comments__comment slide-in examples__gallery-slideInRight">
       <figure class="comments__shape">
         <img src="person.jpg" alt="Person-1" class="comments__img">
         <figcaption class="comments__caption">Mariusz K.</figcaption>
@@ -157,7 +157,7 @@
         <p class="comments__paragraph">Potrzebowałem zregenerować łyżkę od koparki. W okolicy albo terminy na przysłowiowy przyszły rok albo fachowcy którzy nie chcieli się podjąć zadania. Zadzwoniłem do pana Piotra umówiłem się jeszcze tego samego dnia, a na następny dzień łyżka już czekała na mnie gotowa. Na prawdę polecam!</p>
       </div>
     </div>
-    <div class="comments__comment">
+    <div class="comments__comment slide-in .examples__gallery-slideInLeft">
       <figure class="comments__shape">
         <img src="person_2.jpg" alt="Person-1" class="comments__img">
         <figcaption class="comments__caption">Patryk S.</figcaption>
@@ -168,10 +168,10 @@
       </div>
     </div>
   </section>
-  <section class="message">
-    <h2 class="examples__title examples__title-white">Pozwól nam sobie pomóc</h2>
+  <section id="scroll-contact" class="message">
+    <h2 class="examples__title examples__title-white slide-in .examples__gallery-slideInLeft">Pozwól nam sobie pomóc</h2>
     <div id="wrapper">
-      <form id="paper" method="get" action="">
+      <form id="paper" class="slide-in .examples__gallery-slideInRight" method="get" action="">
         <div class="margin">Email: <input class="title" type="text" name="email"></div>
         <div class="margin">Temat: <input class="title" type="text" name="title"></div>
         <textarea placeholder="Opisz swój problem" id="text" name="text" rows="6" style="overflow: hidden; word-wrap: break-word; resize: none; height: 240px; "></textarea>  
