@@ -64,3 +64,41 @@ function init() {
     // Init TypeWriter
     new TypeWriter(txtElement, words, wait);
 }
+
+function debounce(func, wait = 20, immediate = true) {
+    var timeout;
+    return function(){
+        var context = this, args = arguments;
+        var later = function() {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
+};
+
+const sliderObjects = document.querySelectorAll('.slide-in');
+function checkSlide(e){
+    sliderObjects.forEach(sliderObject => {
+        // Middle point of the object height
+        const slideInAt = (window.scrollY + window.innerHeight) -
+        sliderObject.clientHeight / 2;
+        // Bottom border point of object height
+        const objectBottom = sliderObject.offsetTop + sliderObject.clientHeight;
+
+        const isHalfShown = slideInAt > sliderObject.offsetTop;
+        const isNotScrolledPast = window.scrollY < objectBottom;
+        if(isHalfShown && isNotScrolledPast) {
+            sliderObject.classList.add('slide-in-active');
+        } else {
+            sliderObject.classList.remove('slide-in-active');
+        }
+    });
+}
+
+window.addEventListener('scroll', debounce(checkSlide, 40));
+
+
