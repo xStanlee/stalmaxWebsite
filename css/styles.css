@@ -654,3 +654,33 @@ a {
     background-image: url(../footer__BG-2.png);
     background-size: cover;
 }
+@media screen and (max-width:768px) {
+    .navigation__button{
+    height: 12rem;
+    width: 12rem;
+    top: 10rem;
+    right: 10rem;
+    }
+    .navigation__background{
+    height: 11rem;
+    width: 11rem;
+    top: 10rem;
+    right: 10rem;
+    }
+    .bg-video {
+        clip-path: polygon(0 0, 100% 0, 100% 76%, 0 65%);
+    }
+    .examples{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .examples__title{ order: 0;}
+    .examples__gallery{ order: 1;}
+    .examples__text{ order: 2;}
+    .examples__bold{ font-size: 4.2rem;}
+    .examples__paragraph{ font-size: 2.7rem;}
+    .btn, .btn:link, .btn:visited { padding: 2.4rem 4rem;}
+    .btn-blue{ font-size: 3.5rem;}
+}
