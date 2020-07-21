@@ -2,20 +2,31 @@
 
 <html lang="pl">
 <head>
+  <!-- meta-data  -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- company info -->
   <title>Przedsiębiorstwo Stal-Max</title>
   <meta name="description" content="firma spawalnictwo usługi montaż montaz wałbrzych naprawa">
   <meta name="author" content="P.Stachura">
 
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
-  <link rel="shortcut icon" href="favicon.ico"/>
+  <!-- custom styles-->
+  <link rel="stylesheet" href="/static/css/styles.css?v=1.0">
+  <link rel="stylesheet" href="/static/css/queries.css">
+
+  <link rel="shortcut icon" href="/static/img/favicon.ico"/>
+
+  <!-- fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Raleway:wght@300;400&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
+  <!-- Sweet alert -->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
+  <div class="site">
   <div class="navigation">
     <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
 
@@ -27,13 +38,13 @@
 
     <nav class="navigation__nav">
       <div class="logo">
-        <img src="stallmax.png" alt="logo" class="logo__img">
+        <img src="/static/img/stallmax.png" alt="logo" class="logo__img">
       </div>
       <ul class="navigation__list">
         <li class="navigation__item"><a href="#" class="navigation__link"><span>Spawacz Piotr</span>tel: 662-940-776</a></li>
         <li class="navigation__item"><a href="#" class="navigation__link"><span>Elektryk Andrzej</span>tel: 531-327-220</a></li>
         <li class="navigation__item"><a href="#" class="navigation__link"><span>Programista Patryk</span>tel: 733-096-056</a></li>
-        <li class="navigation__item"><a href="#" class="navigation__link">-----------------------------------------------------------------------------------------------------</a></li>
+        <li class="navigation__item"><a href="#" class="navigation__link">---------</a></li>
         <li class="navigation__item"><a href="#" class="navigation__link">e-mail: patryk.stachura@hotmail.com</a></li>
       </ul>
     </nav>
@@ -42,13 +53,13 @@
   <section class="main">
     <div class="bg-video">
       <video class="bg-video__content" autoplay muted loop>
-        <source src="videoplayback.mp4" type="video/mp4">
-        <source src="videoplayback.webm" type="video/webm">
+        <source src="/static/video/videoplayback.mp4" type="video/mp4">
+        <source src="/static/video/videoplayback.webm" type="video/webm">
           Your browser is not supported.
       </video>
     </div>
     <div class="logo">
-      <img src="stallmax.png" alt="logo" class="logo__img">
+      <img src="/static/img/stallmax.png" alt="logo" class="logo__img">
     </div>
 
     <a href="#">
@@ -96,28 +107,51 @@
         Współpracujemy z większymi firmami jako outsourcing
       </h3>
       <p class="examples__paragraph">
-        Wykonywaliśmy prace dla koncernów takich jak toyota czy Alba. Z której to wynikały obopulne korzyści.
+        Wykonywaliśmy prace dla koncernów takich jak toyota czy Alba. Z której to wynikały obopólne korzyści.
       </p>
-      <a href="#section-works" class="btn btn-blue slide-in .examples__gallery-slideInLeft">Pokaż galerie</a>
+      <a id="show-gallery" href="#section-works" class="btn btn-blue slide-in .examples__gallery-slideInRight">Pokaż galerie</a>
+
+
+      <div class="popup__gallery">
+        <div class="popup__gallery--image-main">
+          <img src="/static/img/spawalnictwo.jpg" alt="MainOne" id="current">
+          <div class="popup__gallery--close-container">
+            <div class="popup__gallery--leftright"></div>
+            <div class="popup__gallery--rightleft"></div>
+            <label class="popup__gallery--close">zamknij</label>
+          </div>
+        </div>
+        <div class="popup__gallery--images">
+          <img src="/static/img/elektryka.jpg" alt="as" class="popup__gallery--image popup__gallery--image-1">
+          <img src="/static/img/spawalnictwo.jpg" alt="as" class="popup__gallery--image popup__gallery--image-2">
+          <img src="/static/img/Hydraulika.JPG" alt="as" class="popup__gallery--image popup__gallery--image-3">
+          <img src="/static/img/elektryka.jpg" alt="" class="popup__gallery--image popup__gallery--image-4">
+          <img src="/static/img/elektryka.jpg" alt="" class="popup__gallery--image popup__gallery--image-5">
+          <img src="/static/img/elektryka.jpg" alt="" class="popup__gallery--image popup__gallery--image-6">
+          <img src="/static/img/elektryka.jpg" alt="" class="popup__gallery--image popup__gallery--image-7">
+          <img src="/static/img/elektryka.jpg" alt="" class="popup__gallery--image popup__gallery--image-8">
+        </div>
+      </div>
+
     </div>
 
-    <div class="examples__gallery slide-in examples__gallery-slideInRight">
-      <img src="elektryka.jpg" alt="P1" class="examples__gallery-picture examples__gallery-picture-1">
-      <img src="spawalnictwo.jpg" alt="P2" class="examples__gallery-picture examples__gallery-picture-2">
-      <img src="Hydraulika.JPG" alt="P3" class="examples__gallery-picture examples__gallery-picture-3">
+    <div class="examples__gallery slide-in examples__gallery-slideInLeft">
+      <img src="/static/img/elektryka.jpg" alt="P1" class="examples__gallery-picture examples__gallery-picture-1">
+      <img src="/static/img/spawalnictwo.jpg" alt="P2" class="examples__gallery-picture examples__gallery-picture-2">
+      <img src="/static/img/Hydraulika.JPG" alt="P3" class="examples__gallery-picture examples__gallery-picture-3">
     </div>
   </section>
   <section id="scroll-about" class="services">
-    <div class="services__info services__info-1">
+    <div class="services__info services__info-2">
       <h4 class="services__header">Spawanie</h4>
       <ul class="services__ul">
-        <li class="services__li">Spawanie konstrukcyji stalowych</li>
+        <li class="services__li">Spawanie konstrukcji stalowych</li>
         <li class="services__li">Metaloplastyka detaliczna</li>
         <li class="services__li">Spawanie aluminium</li>
         <li class="services__li">Produkcja podzespołów</li>
       </ul>
     </div>
-    <div class="services__info services__info-2">
+    <div class="services__info services__info-3">
       <h4 class="services__header">Elektryka</h4>
       <ul class="services__ul">
         <li class="services__li">Elektryka domowa</li>
@@ -126,13 +160,13 @@
         <li class="services__li">Naprawa sprzętu elektrycznego lub podzespołów</li>
       </ul>
     </div>
-    <div class="services__info services__info-3">
-      <h4 class="services__header">Hydraulika</h4>
+    <div class="services__info services__info-1">
+      <h4 class="services__header">Operatorka</h4>
       <ul class="services__ul">
-        <li class="services__li">Hydraulika sprzętów ciężkich</li>
-        <li class="services__li">Hydraulika z wykorzystaniem miedzi</li>
-        <li class="services__li">Hydraulika z wykorzystaniem plastiku</li>
-        <li class="services__li">Hydraulika z wykorzystaniem stali</li>
+        <li class="services__li">Operator koparki, ładowarki, koparko-ładowarki</li>
+        <li class="services__li">Operator spychu, walca</li>
+        <li class="services__li">Operator dźwigu, czerpaka</li>
+        <li class="services__li">Kierowca kat. I</li>
       </ul>
     </div>
     <div class="services__info services__info-4">
@@ -141,7 +175,7 @@
         <li class="services__li">Ekrany LED wew.</li>
         <li class="services__li">Ekrany LED zew.(Telebimy)</li>
         <li class="services__li">Kamery smart</li>
-        <li class="services__li">Aplikacji web na zamówienie</li>
+        <li class="services__li">Aplikacje web na zamówienie</li>
       </ul>
     </div>
   </section>
@@ -149,7 +183,7 @@
     <h2 class="examples__title">Nasi zadowoleni klienci</h2>
     <div class="comments__comment slide-in examples__gallery-slideInRight">
       <figure class="comments__shape">
-        <img src="person.jpg" alt="Person-1" class="comments__img">
+        <img src="/static/img/person.jpg" alt="Person-1" class="comments__img">
         <figcaption class="comments__caption">Mariusz K.</figcaption>
       </figure>
       <div class="comments__text">
@@ -159,7 +193,7 @@
     </div>
     <div class="comments__comment slide-in .examples__gallery-slideInLeft">
       <figure class="comments__shape">
-        <img src="person_2.jpg" alt="Person-1" class="comments__img">
+        <img src="/static/img/person_2.jpg" alt="Person-1" class="comments__img">
         <figcaption class="comments__caption">Patryk S.</figcaption>
       </figure>
       <div class="comments__text">
@@ -171,9 +205,12 @@
   <section id="scroll-contact" class="message">
     <h2 class="examples__title examples__title-white slide-in .examples__gallery-slideInLeft">Pozwól nam sobie pomóc</h2>
     <div id="wrapper">
-      <form id="paper" class="slide-in .examples__gallery-slideInRight" method="get" action="">
-        <div class="margin">Email: <input class="title" type="text" name="email"></div>
-        <div class="margin">Temat: <input class="title" type="text" name="title"></div>
+
+
+
+      <form id="paper" class="slide-in .examples__gallery-slideInRight" method="POST">
+        <div class="margin">Email: <input class="title" type="email" name="email" required="true"></div>
+        <div class="margin">Temat: <input class="title" type="text" name="title" required="true"></div>
         <textarea placeholder="Opisz swój problem" id="text" name="text" rows="6" style="overflow: hidden; word-wrap: break-word; resize: none; height: 240px; "></textarea>  
         <br>
         <input id="button" type="submit" value="Wyślij">
@@ -181,8 +218,13 @@
     </div>
   </section>
   <footer class="footer">
-
+    <p class="footer__copyright"> Copyright © by Patryk Stachura 2020 </p>
   </footer>
-  <script src="js/scripts.js"></script>
+  </div>
+  <script src="/static/js/scripts.js"></script>
+  <script>
+    var value = {{  info }};
+    console.log(typeof(value));
+  </script>
 </body>
 </html>
