@@ -1,5 +1,5 @@
 Flask==1.1.2
-Jinja2==2.11.1
+Jinja2==2.11.3
 virtualenv==20.0.18
 Werkzeug==0.16.0
 Flask-Session==0.3.1
